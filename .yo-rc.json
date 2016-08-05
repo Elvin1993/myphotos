@@ -2,7 +2,7 @@
   "generator-react-webpack": {
     "appName": "myPhotos",
     "style": "scss",
-    "postcss": true,
+    "postcss": false,
     "generatedWithVersion": 3
   }
 }
