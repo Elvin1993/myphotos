@@ -5,27 +5,32 @@
     "desc": "desc"
   },
   {
-    "fileName": "2.png",
+    "fileName": "2.jpg",
     "title": "title",
     "desc": "desc"
   },
   {
-    "fileName": "3.png",
+    "fileName": "3.jpg",
     "title": "title",
     "desc": "desc"
   },
   {
-    "fileName": "4.jpeg",
+    "fileName": "4.jpg",
     "title": "title",
     "desc": "desc"
   },
   {
-    "fileName": "5.png",
+    "fileName": "5.jpg",
     "title": "title",
     "desc": "desc"
   },
   {
-    "fileName": "6.png",
+    "fileName": "6.jpg",
+    "title": "title",
+    "desc": "desc"
+  },
+  {
+    "fileName": "7.jpg",
     "title": "title",
     "desc": "desc"
   }

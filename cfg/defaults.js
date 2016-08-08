@@ -24,28 +24,24 @@ function getDefaultModules() {
       }
     ],
     loaders: [
+    {
+        test: /\.json$/,
+        loader: 'json'
+      },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: 'style!css!sass'
       },
       {
-        test: /\.sass/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
-      },
-      {
-        test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+        test: /\.scss|sass$/,
+        loader: 'style!css!sass'
       },
       {
         test: /\.less/,
-        loader: 'style-loader!css-loader!less-loader'
+        loader: 'style!css!sass'
       },
       {
-        test: /\.styl/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      },
-      {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192'
       },
       {

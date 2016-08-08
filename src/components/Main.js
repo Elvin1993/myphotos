@@ -1,23 +1,34 @@
 require('normalize.css/normalize.css');
-require('styles/App.css');
+require('styles/App.scss');
 
 import React from 'react';
+import ImgFigure from './ImgFigure'
+var _ = require('lodash')
 
 
-let yeomanImage = require('../images/yeoman.png');
+let imgList = require('../sources/imageDatas.json')
 
-class AppComponent extends React.Component {
+_.map(imgList, (item) => {
+	return item.url = require(`../images/${item.fileName}`)
+})
+
+export default class AppComponent extends React.Component {
+
   render() {
+  	console.log(imgList)
     return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
-    );
+      
+      <section className="stage">
+      	<section className="img-sec">
+    			{
+    				_.map(imgList, (img, key)=>{
+    					return <ImgFigure key={key} {...img} />
+    				})
+    			}
+      	</section>
+      	<nav className="controller-nav">
+      	</nav>
+      </section>
+    )
   }
 }
-
-AppComponent.defaultProps = {
-};
-
-export default AppComponent;
